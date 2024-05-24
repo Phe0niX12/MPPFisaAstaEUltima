@@ -1,0 +1,208 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-container{
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Table Header */
+th {
+  background-color: #0008f7;
+  color: #000000;
+  font-weight: bold;
+  padding: 8px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table Rows */
+tr:nth-child(even) {
+  background-color: #5e53c458;
+  text-align: center;
+}
+tr:nth-child(odd){
+  background-color: #5e53c4bb;
+  text-align: center;
+}
+
+/* Table Cell */
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect on rows */
+tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Add button styles */
+.add-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-button:hover {
+  background-color: #45a049; /* Darker green */
+}
+.sort-button{
+  background-color: #fb0000c2; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.sort-button:hover {
+  background-color: #ff0000; /* Darker green */
+}
+
+.more-button{
+  background-color: #fb9700c2; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.more-button:hover {
+  background-color: #ffbf00c7; /* Darker green */
+}
+
+
+.modal {
+  display:block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto; /* 10% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* 80% width */
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+button[type="submit"],
+button[type="cancel"] {
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"]{
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover{
+  background-color: #45a049;
+}
+button[type="cancel"]{
+  background-color: #eb0606;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="cancel"]:hover{
+  background-color: #bf0e0e;
+}
+
+.pagination-button{
+  background-color: #00fb04c2; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination-button:hover{
+  background-color: #00fb0484;
+}
+
+.button-container{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-button:disabled{
+  background-color: #6a6161;
+}
